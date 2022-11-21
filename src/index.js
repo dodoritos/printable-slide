@@ -29,8 +29,13 @@ async function createPdf() {
   const pdfBytes = await pdfDoc.save()
   // download(pdfBytes, "pdf-lib_creation_example.pdf", "application/pdf");
 }
+
+console.log("hello")
 document.body.appendChild(component());
-document.getElementById("btn").onclick = function() {
+let btn = document.createElement("button");
+btn.innerHTML = "Click Me";
+document.body.appendChild(btn);
+btn.onclick = function() {
   console.log("hello");
   createPdf();
 };
